@@ -8,8 +8,16 @@ namespace Balkezesek
 {
     class Program
     {
+        public static List<Jatekos> Jatekosok;
+
         static void Main(string[] args)
         {
+            Jatekosok = Jatekos.Beolvasas();
+
+
+
+            Console.ReadKey();
+
         }
     }
 }

@@ -14,9 +14,18 @@ namespace Balkezesek
         {
             Jatekosok = Jatekos.Beolvasas();
 
+            AdatsorokSzama();
 
 
             Console.ReadKey();
+
+        }
+
+        private static void AdatsorokSzama()
+        {
+
+            Console.WriteLine($"3. Feladat: {Jatekosok.Count()}");
+
 
         }
     }

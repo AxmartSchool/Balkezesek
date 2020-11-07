@@ -21,7 +21,7 @@ namespace Balkezesek
         public static List<Jatekos> Beolvasas()
         {
             var output = new List<Jatekos>();
-            var sr = new StreamReader(@"..\..\Jatekos.csv", Encoding.UTF8);
+            var sr = new StreamReader(@"..\..\balkezesek.csv", Encoding.UTF8);
             sr.ReadLine();
             string[] tempTomb;
             while (!sr.EndOfStream)

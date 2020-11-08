@@ -16,10 +16,23 @@ namespace Balkezesek
 
             AdatsorokSzama();
             JatekosokMagassaga();
-
+            EvszamBekeres();
 
             Console.ReadKey();
 
+        }
+
+        private static void EvszamBekeres()
+        {
+            Console.WriteLine("5. Feladat:");
+            Console.Write("Kerek egy 1990 es 1999 kozotti evszamot: ");
+            int evszam = int.Parse(Console.ReadLine());
+
+            while (evszam < 1990 || evszam > 1999 )
+            {
+                Console.Write("Hibas adat!Kerek egy 1990 es 1999 kozotti evszamot: ");
+                evszam = int.Parse(Console.ReadLine());
+            }
         }
 
         private static void JatekosokMagassaga()

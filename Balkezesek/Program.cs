@@ -9,6 +9,7 @@ namespace Balkezesek
     class Program
     {
         public static List<Jatekos> Jatekosok;
+        public static int evszam;
 
         static void Main(string[] args)
         {
@@ -17,8 +18,31 @@ namespace Balkezesek
             AdatsorokSzama();
             JatekosokMagassaga();
             EvszamBekeres();
+            Atlagsuly();
 
             Console.ReadKey();
+
+        }
+
+        private static void Atlagsuly()
+        {
+            int osszeg = 0;
+            int jatekosokSzama = 0;
+
+            foreach (var jatekos in Jatekosok)
+            {
+                if (jatekos.ElsoPalyaraLepes.Year <= evszam)
+                {
+                    osszeg += jatekos.SulyFontban;
+                    jatekosokSzama++;
+                }
+
+
+            }
+
+            Console.WriteLine($"6. Feladat: {(float)osszeg/(float)jatekosokSzama:#.00}");
+
+
 
         }
 
@@ -26,7 +50,7 @@ namespace Balkezesek
         {
             Console.WriteLine("5. Feladat:");
             Console.Write("Kerek egy 1990 es 1999 kozotti evszamot: ");
-            int evszam = int.Parse(Console.ReadLine());
+            evszam = int.Parse(Console.ReadLine());
 
             while (evszam < 1990 || evszam > 1999 )
             {
